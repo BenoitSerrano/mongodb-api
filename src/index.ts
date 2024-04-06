@@ -24,6 +24,7 @@ async function runApp() {
     }
 
     app.get('/', (_, res) => {
+        console.log('GET /');
         res.sendStatus(200);
     });
 
