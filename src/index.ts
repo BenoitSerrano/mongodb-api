@@ -18,10 +18,8 @@ async function runApp() {
 
     const app = express();
 
-    app.use(bodyParser.json());
-
     const router = buildRouter(dataSource);
-    app.use(router);
+    app.use(bodyParser.json(), router);
 
     app.get('/', (_, res) => {
         console.log('GET /');
