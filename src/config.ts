@@ -10,7 +10,6 @@ const config = {
     MONGO_USER: process.env.MONGO_USER || '',
     MONGO_PASSWORD: process.env.MONGO_PASSWORD || '',
     API_KEY: process.env.API_KEY || '',
-    SHOULD_LOAD_DB: process.env.SHOULD_LOAD_DB === 'true' ? true : false,
 };
 
 export { config };
