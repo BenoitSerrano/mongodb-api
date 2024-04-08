@@ -10,8 +10,8 @@ function buildPromptController(dataSource: DataSource) {
         return promptService.getPrompts();
     }
 
-    function createPrompt(params: { body: { promptDto: promptDtoType } }) {
-        return promptService.createPrompt(params.body.promptDto);
+    function createPrompt(params: { body: promptDtoType }) {
+        return promptService.createPrompt(params.body);
     }
 }
 

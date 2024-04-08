@@ -23,7 +23,6 @@ function buildAuthenticatedController<
         }
 
         if (options?.schema) {
-            console.log(req.body);
             const { error } = options.schema.validate(req.body);
             if (error) {
                 console.error(error);
