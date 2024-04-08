@@ -16,7 +16,7 @@ function buildAuthenticatedController<
     },
 ) {
     return async (req: Request, res: Response) => {
-        const apiKey = req.headers['X-API-KEY'];
+        const apiKey = req.headers['x-api-key'];
         if (apiKey !== config.API_KEY) {
             res.sendStatus(httpStatus.UNAUTHORIZED);
             return;
