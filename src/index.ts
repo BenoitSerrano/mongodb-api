@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
 import { config } from './config';
 import { dataSource } from './dataSource';
 import { buildRouter } from './router';
@@ -16,6 +17,8 @@ async function runApp() {
     }
 
     const app = express();
+
+    app.use(bodyParser.json());
 
     const router = buildRouter(dataSource);
     app.use(router);
